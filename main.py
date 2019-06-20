@@ -15,12 +15,12 @@ def saveas():
     savelocation = filedialog.asksaveasfilename(
         initialdir="/", title="Select file", filetypes=(("All", "*.txt"), ("all files", "*.*")))
 
-    //Ends and closes the file browser
+    # Ends and closes the file browser
     file1 = open(savelocation, "w+")
     file1.write(t)
     file1.close()
 
-//Button propertys for save
+# Button propertys for save
 button = Button(root, text="Save", command=saveas)
 button.grid()
 
