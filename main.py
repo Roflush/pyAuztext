@@ -1,7 +1,3 @@
-/*
-
-
-*/
 
 
 from tkinter import *
@@ -9,13 +5,13 @@ import tkinter.filedialog as filedialog
 
 root = Tk("Text Editor")
 
-// Save file
+# Save file
 def saveas():
     global text
 
     t = text.get("1.0", "end-1c")
 
-        //Saves file
+        # Saves file
     savelocation = filedialog.asksaveasfilename(
         initialdir="/", title="Select file", filetypes=(("All", "*.txt"), ("all files", "*.*")))
 
@@ -31,18 +27,18 @@ button.grid()
 
 def FontHelvetica():
 
-    //Adds font Helvetica
+    # Adds font Helvetica
     global text
     text.config(font="Helvetica")
 
 
 def FontCourier():
 
-    //adds font Courier
+    # adds font Courier
     global text
     text.config(font="Courier")
 
-//Adds the menu button for the fonts
+# Adds the menu button for the fonts
 font = Menubutton(root, text="Font")
 font.grid()
 font.menu = Menu(font, tearoff=0)
